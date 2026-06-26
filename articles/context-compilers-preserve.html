@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>what context compilers must preserve | rohan pattanayak</title>
+    <meta name="description" content="article by rohan pattanayak">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="topbar shell">
+        <nav class="nav" aria-label="primary">
+          <a class="interactive" href="../index.html">index</a>
+          <a class="interactive" href="../about.html">about</a>
+          <a class="interactive" href="../work.html">work</a>
+          <a class="interactive" href="../blog.html">blog</a>
+          <a class="interactive" href="../now.html">now</a>
+        </nav>
+      </header>
+      <main class="shell page article">
+        <div class="article-nav"><a class="interactive" href="../blog.html">back to blog</a></div>
+        <p class="date">june 2026</p>
+        <h1>what context compilers must preserve</h1>
+        <p>A context compiler for browser agents has a strange job. It must remove a lot of the page while still keeping the parts that make the page usable. If it keeps everything, the agent gets noise. If it keeps too little, the agent gets a neat summary that cannot act. The hard work is deciding what survives the translation from live interface to structured context.</p>
+        <p>Hierarchy has to survive first. Pages are not flat bags of text. A heading introduces a section. A label belongs to a control. A table cell belongs to a row and a column. A button may belong to a form, a modal, a navigation region, or a destructive action zone that deserves several seconds of nervous respect. When hierarchy disappears, meaning becomes guesswork.</p>
+        <p>Meaning has to survive too. Text content matters, but it is not enough. The compiler should preserve roles, names, states, and relationships. A visible phrase near an input can explain what the input expects. A disabled control tells the agent something about the current state. A selected tab changes which content is active. These are not decorative details. They are the grammar of the interface.</p>
+        <p>Provenance is where the system becomes practical. Every extracted item should know where it came from. If a compiler says there is a button called continue, the browser side needs a way to find that same button later. This does not mean dumping selectors everywhere until the context looks like a drawer full of cables. It means keeping trace information precise enough to act and compact enough to read.</p>
+        <p>Without that thread back to the page, context becomes decorative.</p>
+        <p>Actions deserve special treatment. A page can be readable while still being unusable for an agent. The compiler should expose what can be clicked, typed into, selected, submitted, opened, closed, or navigated. It should also preserve whether those actions appear available. The difference between a link, a submit button, and a menu item matters because each one changes the page in a different way.</p>
+        <p>Useful omissions are part of preservation, which sounds backwards but is not. Removing a decorative wrapper can preserve the actual relationship between label and field. Skipping repeated layout text can make the remaining content clearer. Hiding invisible nodes can prevent the agent from acting on something the user cannot see. A good compiler is not a photocopier. It is an editor with responsibilities.</p>
+        <p>The compiler also needs to respect uncertainty. Some pages are messy. Labels are missing. Controls are custom. State is implied through classes or scripts. In those cases the context should not pretend to know more than it does. It can say that a control is visible, that the name is inferred, or that the relationship is weak. Honest uncertainty is more useful than confident nonsense, which has already had a strong career on the internet.</p>
+        <p>The difference between readable page content and usable agent context is action. Readable content helps the model understand what the page says. Usable context helps the system decide what can happen next and then do it through the browser. A context compiler must preserve both the human meaning and the mechanical path back to the interface. That is the quiet bridge. Without it, the agent is just reading a page from behind glass.</p>
+      </main>
+      <footer class="footer">
+        <div class="shell">
+          <span>rohan pattanayak</span>
+          <div class="footer-links">
+            <a class="interactive" href="https://github.com/RohanOnKeys">github</a>
+            <a class="interactive" href="https://www.linkedin.com/in/rohan-pattanayak-a142a1284">linkedin</a>
+            <a class="interactive" href="mailto:rohanpxquantum@gmail.com">email</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

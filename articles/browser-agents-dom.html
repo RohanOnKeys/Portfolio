@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>why browser agents should not start with the whole DOM | rohan pattanayak</title>
+    <meta name="description" content="article by rohan pattanayak">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="topbar shell">
+        <nav class="nav" aria-label="primary">
+          <a class="interactive" href="../index.html">index</a>
+          <a class="interactive" href="../about.html">about</a>
+          <a class="interactive" href="../work.html">work</a>
+          <a class="interactive" href="../blog.html">blog</a>
+          <a class="interactive" href="../now.html">now</a>
+        </nav>
+      </header>
+      <main class="shell page article">
+        <div class="article-nav"><a class="interactive" href="../blog.html">back to blog</a></div>
+        <p class="date">june 2026</p>
+        <h1>why browser agents should not start with the whole DOM</h1>
+        <p>There is a tempting move in browser automation that feels practical for about five minutes. Take the whole DOM, put it into a model, and ask the model what to do next. It sounds honest. It sounds complete. It also turns the page into a storage unit where every useful object is buried under six boxes of layout residue.</p>
+        <p>The DOM is not the same thing as the interface. It contains the interface, but it also contains build artifacts, wrappers, duplicated text, hidden menus, framework scaffolding, analytics hooks, style helpers, and every tiny container that survived the frontend assembly line. A human can ignore most of that because the browser gives us a visual surface. An agent reading raw HTML has to decide what matters from the inside of the machinery.</p>
+        <p>That is not impossible, but it is wasteful. More structure does not automatically mean more context. A page can include thousands of nodes while the task only depends on a heading, a form, three controls, a table, and one disabled button that explains the whole sad situation. Sending everything makes the model spend attention on things that were never meant to be read as meaning.</p>
+        <p>The better starting point is a compiler. Not a compiler in the dramatic sense. I mean a boring and useful layer that turns a live page into structured context. It should preserve semantic regions. It should keep headings in order. It should expose readable text without pretending every nested span deserves a biography. It should describe actions as actions, forms as forms, links as links, and tables as tables.</p>
+        <p>Actions matter because an agent is not only reading. It may click, type, select, submit, or navigate. If context only says that a button exists, that is not enough. The agent needs to know where the button came from, what label it has, whether it is disabled, whether it belongs to a form, and how to trace it back to a selector that can still work after the model stops thinking and the browser has to do something real.</p>
+        <p>Traceability is the part people skip when they are excited. A summary without provenance is just vibes with indentation. If the agent decides to click a control, the system needs a path back to that control. The compiler has to keep enough selector information to act, but not so much surrounding noise that every decision becomes a swamp. This is the uncomfortable middle. It is also where useful tools live.</p>
+        <p>Useful omission is a feature. Hidden nodes may matter sometimes, but not always. Decorative images may matter on a design review, but not when filling a login form. Repeated navigation may be useful once, then become clutter. The compiler should decide what to include based on roles, visibility, text, relationships, and task relevance when that exists. It should be allowed to leave junk behind without feeling guilty.</p>
+        <p>Raw HTML is valuable as source material. I do not think it should be thrown away. But giving a model the entire page and calling it strategy is a quiet admission that the system does not know what the page means. Browser agents need context shaped for understanding and action. The whole DOM is where the work begins, not where the agent should be asked to think.</p>
+      </main>
+      <footer class="footer">
+        <div class="shell">
+          <span>rohan pattanayak</span>
+          <div class="footer-links">
+            <a class="interactive" href="https://github.com/RohanOnKeys">github</a>
+            <a class="interactive" href="https://www.linkedin.com/in/rohan-pattanayak-a142a1284">linkedin</a>
+            <a class="interactive" href="mailto:rohanpxquantum@gmail.com">email</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

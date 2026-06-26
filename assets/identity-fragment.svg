@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="520" viewBox="0 0 360 520" role="img" aria-label="static abstract identity fragment">
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="3" seed="7"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.41 0 0 0 0 0.85 0 0 0 0 1 0 0 0 0.33 0"/>
+    </filter>
+    <clipPath id="cut">
+      <path d="M151 165c-52 28 -74 98 -72 172 2 92 54 145 112 146 68 1 107 -66 112 -154 5 -84 -18 -143 -65 -165 -24 -11 -58 -12 -87 1z"/>
+    </clipPath>
+  </defs>
+  <rect width="360" height="520" fill="none"/>
+  <g opacity="0.52">
+    <path d="M93 95c48 -47 140 -54 190 -6M69 144c76 -79 194 -80 243 -6M103 219c58 -49 129 -48 174 1" fill="none" stroke="#69d8ff" stroke-width="1.4"/>
+    <path d="M82 108c82 31 156 -58 225 -10M116 73c53 54 130 -14 176 37M63 183c70 -22 102 46 182 20" fill="none" stroke="#6d5dff" stroke-width="1" opacity="0.8"/>
+  </g>
+  <g clip-path="url(#cut)">
+    <rect x="65" y="135" width="250" height="370" fill="#69d8ff" opacity="0.12"/>
+    <path d="M136 167c35 -22 89 -14 111 17 32 45 38 147 11 215 -19 48 -72 76 -114 48 -51 -34 -55 -152 -39 -219 8 -31 15 -51 31 -61z" fill="#dcecff" opacity="0.24"/>
+    <path d="M101 279h176M87 318h205M101 357h174M93 399h196M126 441h114" stroke="#f5f8ff" stroke-width="5" opacity="0.13"/>
+    <rect width="360" height="520" filter="url(#grain)" opacity="0.74"/>
+  </g>
+  <g fill="none" stroke="#b8d8ff" opacity="0.34">
+    <path d="M111 161c31 -35 112 -35 147 -2" stroke-width="2"/>
+    <path d="M124 186c23 24 91 23 118 -2" stroke-width="1"/>
+    <path d="M85 296c55 -15 138 -21 221 4" stroke-width="1"/>
+    <path d="M103 427c48 24 106 25 156 0" stroke-width="1"/>
+  </g>
+  <g fill="none" stroke="#69d8ff" stroke-width="1.2" opacity="0.62">
+    <path d="M118 116c33 -42 96 14 48 45 -46 31 -97 -21 -51 -56 37 -28 116 -14 149 22"/>
+    <path d="M110 134c67 45 123 -68 164 5 24 43 -67 66 -107 25 -22 -22 11 -63 62 -46"/>
+    <path d="M136 95c19 41 80 12 107 47"/>
+  </g>
+  <g stroke="#02050d" stroke-width="9" opacity="0.72">
+    <path d="M67 259l238 35M93 342l194 -22M143 482l92 -309"/>
+  </g>
+  <g stroke="#f5f8ff" opacity="0.22">
+    <path d="M36 206h44M279 255h32M55 455h86M252 102h38M202 474h56"/>
+  </g>
+</svg>

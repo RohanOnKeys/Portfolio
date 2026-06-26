@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="240" viewBox="0 0 740 240" role="img" aria-label="static damaged notebook fragment">
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="21"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.42 0 0 0 0 0.61 0 0 0 0 0.86 0 0 0 0.28 0"/>
+    </filter>
+  </defs>
+  <rect width="740" height="240" fill="#050b18"/>
+  <rect x="24" y="30" width="686" height="166" fill="#091326" opacity="0.58"/>
+  <rect x="24" y="30" width="686" height="166" filter="url(#paper)" opacity="0.55"/>
+  <g fill="none" stroke="#6a97da" opacity="0.2">
+    <path d="M52 66h602M52 104h530M52 144h624M52 179h434"/>
+    <path d="M144 41v137M290 31v166M478 31v166M619 45v126"/>
+  </g>
+  <g fill="none" stroke="#69d8ff" stroke-width="1.2" opacity="0.68">
+    <path d="M91 113c37 -54 130 -16 92 34 -42 55 -143 -3 -88 -61 59 -61 170 10 219 -36"/>
+    <path d="M390 98c62 -30 121 -20 159 29 18 23 70 16 93 -10"/>
+    <path d="M351 151c67 -21 136 -3 185 28"/>
+  </g>
+  <g stroke="#f5f8ff" opacity="0.2">
+    <path d="M42 49h21M84 49h12M198 203h67M532 54h28M585 54h8M652 201h34"/>
+  </g>
+  <g stroke="#02050d" stroke-width="7" opacity="0.72">
+    <path d="M240 39l-38 160M612 31l-93 173"/>
+  </g>
+  <g fill="#f5f8ff" opacity="0.14">
+    <rect x="67" y="187" width="34" height="7"/>
+    <rect x="558" y="68" width="64" height="9"/>
+    <rect x="311" y="44" width="21" height="6"/>
+  </g>
+</svg>

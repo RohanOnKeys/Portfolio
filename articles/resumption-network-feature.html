@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>resumption is a first class network feature | rohan pattanayak</title>
+    <meta name="description" content="article by rohan pattanayak">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="topbar shell">
+        <nav class="nav" aria-label="primary">
+          <a class="interactive" href="../index.html">index</a>
+          <a class="interactive" href="../about.html">about</a>
+          <a class="interactive" href="../work.html">work</a>
+          <a class="interactive" href="../blog.html">blog</a>
+          <a class="interactive" href="../now.html">now</a>
+        </nav>
+      </header>
+      <main class="shell page article">
+        <div class="article-nav"><a class="interactive" href="../blog.html">back to blog</a></div>
+        <p class="date">june 2026</p>
+        <h1>resumption is a first class network feature</h1>
+        <p>A lot of network software behaves as if connection is a mood that will remain stable if everyone is polite. The transfer begins, bytes move, the connection holds, and the system finishes. That is the simple story. It is also the story that breaks the moment the link drops, a device sleeps, a route changes, or the network decides to stare into the distance for reasons known only to infrastructure.</p>
+        <p>Interrupted connections are not edge cases for many systems. They are normal cases wearing slightly worse lighting. Mobile devices move between networks. Remote regions have inconsistent links. Satellites and orbital systems have contact windows. Browsers pause work. Servers restart. A transfer that assumes continuous connectivity is not always wrong, but it is optimistic in a way that can become expensive.</p>
+        <p>Resumption should be treated as a first class feature because partial progress has value. If a system has already moved half of a file, half of a stream, or half of a structured payload, losing that work is not just inconvenient. It makes the protocol pretend time did not happen. The system should be able to ask what arrived, what is missing, what can be verified, and what should continue next.</p>
+        <p>That requires persistence. State has to survive outside the perfect connection. The sender needs to know what it intended to send. The receiver needs to know what it has accepted. Both sides need enough shared structure to avoid repeating everything while still detecting corruption, duplication, or stale assumptions. Retrying blindly is not resumption. It is panic with a loop.</p>
+        <p>Good resumption also needs boundaries. Chunks, ranges, segments, records, or some other unit of progress must be named and verified. If the system cannot describe partial completion, it cannot resume intelligently. It can only restart and hope the user has developed patience as a lifestyle. Verification matters here because a resumed transfer is only useful if both sides agree on what the resumed state means.</p>
+        <p>The boring ledger is what makes the graceful recovery possible.</p>
+        <p>Priority is another part of the problem. After an interruption, not every missing piece has equal value. Metadata may unblock planning. A small index may be needed before a large body. Some data may be urgent, while other data can wait for a better connection. A protocol that supports resumption can also support more thoughtful ordering. It can move what helps the system recover first instead of treating the transfer like an evenly sliced loaf of inconvenience.</p>
+        <p>There is also an emotional part, which is not very scientific but feels true when debugging. Systems that resume well feel calmer. They do not treat failure as a collapse. They treat it as an event in a longer conversation. They keep records. They recover. They do not ask everyone to start over because one link blinked at the wrong time.</p>
+        <p>Stable connectivity is useful when it exists. Designing as if it is guaranteed makes the software fragile in all the places where the world is least interested in cooperating. Resumption gives the system memory. It lets progress remain progress even when the path breaks. That feels like a small idea until you need it, and then it becomes the difference between a temporary interruption and a complete waste of everyone's afternoon.</p>
+      </main>
+      <footer class="footer">
+        <div class="shell">
+          <span>rohan pattanayak</span>
+          <div class="footer-links">
+            <a class="interactive" href="https://github.com/RohanOnKeys">github</a>
+            <a class="interactive" href="https://www.linkedin.com/in/rohan-pattanayak-a142a1284">linkedin</a>
+            <a class="interactive" href="mailto:rohanpxquantum@gmail.com">email</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

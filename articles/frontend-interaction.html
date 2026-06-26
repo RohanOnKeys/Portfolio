@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>frontend interaction is harder than clicking things politely | rohan pattanayak</title>
+    <meta name="description" content="article by rohan pattanayak">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="topbar shell">
+        <nav class="nav" aria-label="primary">
+          <a class="interactive" href="../index.html">index</a>
+          <a class="interactive" href="../about.html">about</a>
+          <a class="interactive" href="../work.html">work</a>
+          <a class="interactive" href="../blog.html">blog</a>
+          <a class="interactive" href="../now.html">now</a>
+        </nav>
+      </header>
+      <main class="shell page article">
+        <div class="article-nav"><a class="interactive" href="../blog.html">back to blog</a></div>
+        <p class="date">june 2026</p>
+        <h1>frontend interaction is harder than clicking things politely</h1>
+        <p>Clicking is the easiest part of using an interface, which is why it gets mistaken for the whole problem. A browser agent can find an element, move toward it, and press it. That is movement. It is not understanding. The hard part is knowing whether the click is available, meaningful, reversible, destructive, required, premature, or just bait placed there by a layout that has not finished waking up.</p>
+        <p>Interfaces are full of ambiguity. A button can look active while a request is still loading. A field can accept input while rejecting it later through validation. A menu can hide the option that matters until another state changes. A checkbox can be a setting, a consent, a filter, or the final boss of a form designed during a long afternoon. Seeing the element does not tell you enough.</p>
+        <p>Humans handle this with context. We read nearby labels. We notice disabled styles. We remember that a modal changed the page. We hesitate when a button says delete. We also use a large amount of cultural knowledge that nobody writes into the DOM. The agent gets none of that for free. It needs explicit help from the system around it.</p>
+        <p>State is the first problem. A live interface changes while the agent is thinking. Data loads. Errors appear. Focus moves. A selected option changes the rest of the form. The same control can mean different things before and after a state transition. If the agent only has a static snapshot, it may act on a version of the page that is already gone. This is not intelligence failing. It is reality being rude.</p>
+        <p>Hidden constraints are the second problem. Some constraints are visible, like required fields or disabled controls. Others are buried in scripts, server responses, or validation messages that appear only after the wrong attempt. An agent that interacts safely should be able to inspect what the page exposes before acting. It should know which fields belong together, which action submits the group, and which warning text is attached to the thing it is about to touch.</p>
+        <p>Safe action is not just avoiding dangerous buttons. It is sequencing. It is knowing that typing before selecting a country may change the available fields. It is knowing that opening a menu might cover the button underneath it. It is knowing that a navigation link is different from a form submit, even if both are blue and annoying. The frontend is a set of commitments, not a set of rectangles.</p>
+        <p>This is why browser agent context needs more than coordinates and labels. It needs roles, relationships, visibility, enabled state, form grouping, nearby explanation, and a reliable way to reidentify the target. It needs to preserve what an action means in the page, not only how to perform it mechanically. A click without meaning is just a tiny accident with good posture.</p>
+        <p>The goal is not to make agents timid. It is to make them less theatrical. A good agent should ask less from the model when the interface can already explain itself. It should inspect before it acts. It should notice when the page says wait. It should know when the best action is no action yet. Frontend interaction is hard because interfaces are social objects disguised as technical ones. They expect interpretation. Agents need systems that help them do that interpretation before they start pressing things with confidence.</p>
+      </main>
+      <footer class="footer">
+        <div class="shell">
+          <span>rohan pattanayak</span>
+          <div class="footer-links">
+            <a class="interactive" href="https://github.com/RohanOnKeys">github</a>
+            <a class="interactive" href="https://www.linkedin.com/in/rohan-pattanayak-a142a1284">linkedin</a>
+            <a class="interactive" href="mailto:rohanpxquantum@gmail.com">email</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

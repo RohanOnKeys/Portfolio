@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <g stroke="#f5f8ff" opacity="0.035">
+    <path d="M0 22h1600M0 58h1600M0 96h1600M0 132h1600M0 171h1600M0 207h1600M0 246h1600M0 282h1600M0 321h1600M0 357h1600M0 396h1600M0 432h1600M0 471h1600M0 507h1600M0 546h1600M0 582h1600M0 621h1600M0 657h1600M0 696h1600M0 732h1600M0 771h1600M0 807h1600M0 846h1600M0 882h1600M0 921h1600M0 957h1600"/>
+  </g>
+  <g fill="#69d8ff" opacity="0.055">
+    <rect x="126" y="180" width="1" height="42"/>
+    <rect x="784" y="74" width="2" height="83"/>
+    <rect x="1464" y="388" width="1" height="119"/>
+    <rect x="1060" y="744" width="1" height="68"/>
+    <rect x="319" y="812" width="2" height="102"/>
+  </g>
+  <g stroke="#b8d8ff" opacity="0.08">
+    <path d="M58 244h138M154 250h312M1190 612h210M1332 618h92M811 141h43M111 901h280"/>
+  </g>
+</svg>

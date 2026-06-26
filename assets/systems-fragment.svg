@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="170" viewBox="0 0 900 170" role="img" aria-label="static abstract systems fragment">
+  <rect width="900" height="170" fill="#050b18"/>
+  <g stroke="#6a97da" opacity="0.2">
+    <path d="M0 34h184M245 34h212M530 34h370M0 88h391M460 88h198M719 88h181M0 137h294M345 137h555"/>
+    <path d="M88 0v61M88 91v170M241 0v170M397 0v82M397 118v170M563 0v170M714 0v44M714 75v170"/>
+  </g>
+  <g fill="none" stroke="#69d8ff" opacity="0.55">
+    <path d="M39 119c72 -62 151 -70 244 -24" stroke-width="2"/>
+    <path d="M136 92c33 -72 128 -77 177 -18" stroke-width="1"/>
+    <path d="M431 96h78l32 -31h93l38 42h82l29 -24h78" stroke-width="2"/>
+    <path d="M502 132c72 19 153 -4 207 -61" stroke-width="1"/>
+    <path d="M610 29c-18 46 -8 98 28 130" stroke-width="1"/>
+  </g>
+  <g stroke="#02050d" stroke-width="8" opacity="0.85">
+    <path d="M301 30l-42 123M670 7l-120 158M784 43l-65 91"/>
+  </g>
+  <g fill="#69d8ff" opacity="0.18">
+    <rect x="60" y="52" width="96" height="22"/>
+    <rect x="329" y="106" width="120" height="18"/>
+    <rect x="744" y="28" width="86" height="20"/>
+  </g>
+  <g stroke="#f5f8ff" opacity="0.18">
+    <path d="M116 151h76M209 151h22M478 25h48M813 126h29M86 22h14"/>
+  </g>
+</svg>
