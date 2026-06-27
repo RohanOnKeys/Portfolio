@@ -51,7 +51,7 @@ body.home-bg .site {
 body.about-bg {
   background-image: url("assets/images/page-about-bg.jpg");
   background-size: cover;
-  background-position: center 30%;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -83,7 +83,7 @@ body.now-bg .site {
 
 @media (min-width: 900px) {
   body.about-bg {
-    background-position: center 28%;
+    background-position: center center;
   }
 
   body.work-bg {
