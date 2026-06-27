@@ -37,6 +37,60 @@ body {
   letter-spacing: 0;
 }
 
+body.home-bg {
+  background-image: url("assets/images/page-home-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.home-bg .site {
+  background: rgba(2, 5, 13, 0.48);
+}
+
+body.about-bg {
+  background-image: url("assets/images/page-about-bg.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+body.about-bg .site {
+  background: rgba(2, 5, 13, 0.68);
+}
+
+body.work-bg {
+  background-image: url("assets/images/page-work-bg.jpg");
+  background-size: cover;
+  background-position: center 78%;
+  background-repeat: no-repeat;
+}
+
+body.work-bg .site {
+  background: rgba(2, 5, 13, 0.7);
+}
+
+body.now-bg {
+  background-image: url("assets/images/page-now-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+body.now-bg .site {
+  background: rgba(2, 5, 13, 0.72);
+}
+
+@media (min-width: 900px) {
+  body.about-bg {
+    background-position: center 28%;
+  }
+
+  body.work-bg {
+    background-position: center 78%;
+  }
+}
+
 body::before {
   content: none;
 }
