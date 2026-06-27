@@ -312,13 +312,6 @@ p {
   line-height: 1.8;
 }
 
-.systems-fragment {
-  margin: 2.2rem 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.systems-fragment img,
 .identity-small img,
 .identity-tall img {
   display: block;
@@ -415,6 +408,33 @@ p {
 .footer-links {
   display: flex;
   gap: 0.7rem;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+}
+
+.footer-link::before {
+  width: 0.82rem;
+  height: 0.82rem;
+  content: "";
+  background: currentColor;
+  -webkit-mask: var(--footer-icon) center / contain no-repeat;
+  mask: var(--footer-icon) center / contain no-repeat;
+}
+
+.footer-github {
+  --footer-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.7.4.08.55-.18.55-.39v-1.38c-2.23.49-2.7-1.09-2.7-1.09-.36-.94-.89-1.19-.89-1.19-.73-.51.06-.5.06-.5.8.06 1.23.84 1.23.84.72 1.25 1.87.89 2.33.68.07-.53.28-.89.51-1.09-1.78-.21-3.64-.91-3.64-4.02 0-.89.31-1.61.82-2.18-.08-.21-.36-1.04.08-2.15 0 0 .67-.22 2.2.83A7.48 7.48 0 0 1 8 3.91c.68 0 1.36.09 1.99.28 1.53-1.05 2.2-.83 2.2-.83.44 1.11.16 1.94.08 2.15.51.57.82 1.29.82 2.18 0 3.12-1.87 3.81-3.65 4.01.29.25.54.75.54 1.51v2.23c0 .21.15.47.55.39A8.08 8.08 0 0 0 16 8.13C16 3.64 12.42 0 8 0z'/%3E%3C/svg%3E");
+}
+
+.footer-linkedin {
+  --footer-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.36 8h4.28v14H.36V8zM8 8h4.1v1.92h.06c.57-1.08 1.96-2.22 4.04-2.22 4.32 0 5.12 2.85 5.12 6.56V22h-4.27v-6.88c0-1.64-.03-3.75-2.28-3.75-2.29 0-2.64 1.79-2.64 3.63v7H8V8z'/%3E%3C/svg%3E");
+}
+
+.footer-email {
+  --footer-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 8.2L4.6 7H4v10h16V7h-.6L12 13.2zM6.25 7 12 11.8 17.75 7H6.25z'/%3E%3C/svg%3E");
 }
 
 @media (max-width: 760px) {
