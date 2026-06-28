@@ -135,6 +135,7 @@ textarea {
   gap: clamp(0.6rem, 2vw, 1.2rem);
   font-family: "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
   font-size: 0.78rem;
+  font-weight: 700;
   text-transform: lowercase;
 }
 
@@ -151,6 +152,13 @@ textarea {
   color: var(--black);
   background: var(--white);
   outline: none;
+}
+
+.nav .interactive:hover,
+.nav .interactive:focus-visible,
+.nav .interactive[aria-current="page"] {
+  color: var(--white);
+  background: transparent;
 }
 
 main {
