@@ -32,7 +32,6 @@ body {
   background-color: var(--void);
   background-image: url("assets/archive-bg.svg");
   background-size: cover;
-  background-attachment: fixed;
   font-family: Inter, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0;
 }
@@ -492,6 +491,14 @@ p {
 }
 
 @media (max-width: 760px) {
+  body,
+  body.home-bg,
+  body.about-bg,
+  body.work-bg,
+  body.now-bg {
+    background-attachment: scroll;
+  }
+
   .shell {
     width: min(100% - 1.2rem, 1120px);
   }
