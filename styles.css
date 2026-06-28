@@ -37,10 +37,9 @@ body {
 }
 
 body.home-bg {
-  background-image: url("assets/images/page-home-bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  --page-bg-image: url("assets/images/page-home-bg.jpg");
+  --page-bg-position: center center;
+  background-image: none;
 }
 
 body.home-bg .site {
@@ -48,10 +47,9 @@ body.home-bg .site {
 }
 
 body.about-bg {
-  background-image: url("assets/images/page-about-bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  --page-bg-image: url("assets/images/page-about-bg.jpg");
+  --page-bg-position: center center;
+  background-image: none;
 }
 
 body.about-bg .site {
@@ -59,10 +57,9 @@ body.about-bg .site {
 }
 
 body.work-bg {
-  background-image: url("assets/images/page-work-bg.jpg");
-  background-size: cover;
-  background-position: center 78%;
-  background-repeat: no-repeat;
+  --page-bg-image: url("assets/images/page-work-bg.jpg");
+  --page-bg-position: center 78%;
+  background-image: none;
 }
 
 body.work-bg .site {
@@ -70,24 +67,13 @@ body.work-bg .site {
 }
 
 body.now-bg {
-  background-image: url("assets/images/page-now-bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  --page-bg-image: url("assets/images/page-now-bg.jpg");
+  --page-bg-position: center center;
+  background-image: none;
 }
 
 body.now-bg .site {
   background: rgba(2, 5, 13, 0.72);
-}
-
-@media (min-width: 900px) {
-  body.about-bg {
-    background-position: center center;
-  }
-
-  body.work-bg {
-    background-position: center 78%;
-  }
 }
 
 body::before {
@@ -96,6 +82,22 @@ body::before {
 
 body::after {
   content: none;
+}
+
+body.home-bg::before,
+body.about-bg::before,
+body.work-bg::before,
+body.now-bg::before {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+  background-image: var(--page-bg-image);
+  background-size: cover;
+  background-position: var(--page-bg-position);
+  background-repeat: no-repeat;
+  transform: translateZ(0);
 }
 
 a {
@@ -118,6 +120,8 @@ textarea {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .shell {
@@ -499,14 +503,6 @@ p {
 }
 
 @media (max-width: 760px) {
-  body,
-  body.home-bg,
-  body.about-bg,
-  body.work-bg,
-  body.now-bg {
-    background-attachment: scroll;
-  }
-
   .shell {
     width: min(100% - 1.2rem, 1120px);
   }
