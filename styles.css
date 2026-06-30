@@ -76,6 +76,16 @@ body.now-bg .site {
   background: rgba(2, 5, 13, 0.72);
 }
 
+body.blog-bg {
+  --page-bg-image: url("assets/images/blog_bg.jpg");
+  --page-bg-position: center center;
+  background-image: none;
+}
+
+body.blog-bg .site {
+  background: rgba(2, 5, 13, 0.68);
+}
+
 body::before {
   content: none;
 }
@@ -87,7 +97,8 @@ body::after {
 body.home-bg::before,
 body.about-bg::before,
 body.work-bg::before,
-body.now-bg::before {
+body.now-bg::before,
+body.blog-bg::before {
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -137,25 +148,35 @@ textarea {
   display: flex;
   justify-content: flex-end;
   gap: clamp(0.6rem, 2vw, 1.2rem);
+  font-size: 0.78rem;
+  text-transform: lowercase;
+  align-items: center;
+}
+
+.nav .interactive {
   font-family: "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
   font-size: 0.78rem;
   font-weight: 700;
-  text-transform: lowercase;
-}
-
-.interactive {
   color: var(--blue);
   background: transparent;
   padding: 0.14rem 0.32rem;
-  transition: background-color 140ms ease, color 140ms ease;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), background-color 140ms ease, color 140ms ease;
+  transform: scale(1);
+  cursor: pointer;
+  will-change: transform;
 }
 
-.interactive:hover,
-.interactive:focus-visible,
-.interactive[aria-current="page"] {
-  color: var(--black);
-  background: var(--white);
-  outline: none;
+.non-interactive {
+  font-family: "IBM Plex Mono", "JetBrains Mono", Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: transparent;
+  padding: 0.14rem 0.32rem;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), background-color 140ms ease, color 140ms ease;
+  transform: scale(1);
+  cursor: pointer;
+  will-change: transform;
 }
 
 .nav .interactive:hover,
@@ -163,7 +184,15 @@ textarea {
 .nav .interactive[aria-current="page"] {
   color: var(--white);
   background: transparent;
+  outline: none;
+  transform: scale(1.18);
 }
+
+.nav .interactive.shrink {
+  transform: scale(0.88);
+}
+
+
 
 main {
   flex: 1;
@@ -500,6 +529,10 @@ p {
 
 .footer-email {
   --footer-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 8.2L4.6 7H4v10h16V7h-.6L12 13.2zM6.25 7 12 11.8 17.75 7H6.25z'/%3E%3C/svg%3E");
+}
+
+.footer-book {
+  --footer-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 2h13a1 1 0 0 1 1 1v17.3l-5.28-1.6a1 1 0 0 0-.54 0L6.88 20.3V3a1 1 0 0 1 1-1H4zM3 3v18l5.88-1.78 5.88 1.78V3H3z'/%3E%3C/svg%3E");
 }
 
 @media (max-width: 760px) {

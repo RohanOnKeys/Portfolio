@@ -43,5 +43,22 @@
         </div>
       </footer>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('.nav');
+      const items = nav.querySelectorAll('.interactive');
+      items.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          items.forEach(el => {
+            if (el !== item) el.classList.add('shrink');
+            else el.classList.remove('shrink');
+          });
+        });
+        item.addEventListener('mouseleave', () => {
+          items.forEach(el => el.classList.remove('shrink'));
+        });
+      });
+    });
+    </script>
   </body>
 </html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>why quantum computers need translators before they can think | rohan pattanayak</title>
+    <meta name="description" content="article by rohan pattanayak">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="topbar shell">
+        <nav class="nav" aria-label="primary">
+          <a class="interactive" href="../index.html">home</a>
+          <a class="interactive" href="../about.html">about</a>
+          <a class="interactive" href="../work.html">work</a>
+          <a class="interactive" href="../blog.html">blog</a>
+          <a class="interactive" href="../now.html">now</a>
+        </nav>
+      </header>
+      <main class="shell page article">
+        <div class="article-nav"><a class="interactive" href="../blog.html">back to blog</a></div>
+        <p class="date">june 2026</p>
+        <h1>why quantum computers need translators before they can think</h1>
+        <p>One of my favorite moments from the Qiskit Global Summer School was realizing that quantum computers are incredibly smart machines... that somehow still need someone to rewrite their homework before they can solve it.</p>
+        <p>That "someone" is called the <strong>transpiler</strong>.</p>
+        <p>When you write a quantum circuit in Qiskit, you're writing it in a clean, ideal world. Gates can be placed wherever you want, qubits seem perfectly connected, and everything looks neat enough to impress your future self.</p>
+        <p>The quantum hardware, however, has other plans.</p>
+        <p>Real quantum processors have physical limitations. Not every qubit can directly talk to every other qubit. Some operations are noisier than others. Certain gates are native to the hardware while others need to be rewritten into combinations the processor actually understands.</p>
+        <p>So before your circuit ever reaches a quantum computer, the transpiler politely looks at your masterpiece and says,</p>
+        <p><em>"Cute. Here's how we're actually going to do it."</em></p>
+        <p>It rearranges gates, inserts extra operations when needed, changes routing between qubits, and tries to keep the circuit as short as possible because every additional operation gives noise another opportunity to ruin your day.</p>
+        <p>Then we learned about benchmarking.</p>
+        <p>I expected benchmarking to be something glamorous. Instead, it felt like giving the quantum computer a daily health check.</p>
+        <p>How reliable are the gates today?</p>
+        <p>How much noise has crept in?</p>
+        <p>How likely is this circuit to survive?</p>
+        <p>The answer, as with most engineering questions, was usually, "It depends."</p>
+        <p>And then came error mitigation and quantum error correction.</p>
+        <p>Classical computers flip a bit from 0 to 1 and call it a day.</p>
+        <p>Quantum computers have to deal with fragile quantum states that seem personally offended by the idea of existing for too long. Heat, vibration, stray electromagnetic fields, and occasionally what feels like pure bad luck can introduce errors.</p>
+        <p>The solution is not to build perfect qubits.</p>
+        <p>The solution is to build clever systems that notice errors before everything falls apart.</p>
+        <p>That's when I realized something.</p>
+        <p>Most of quantum computing is not about making qubits smarter.</p>
+        <p>It's about stopping reality from bullying them.</p>
+        <p>After two weeks, I came away with a much deeper appreciation for the engineering behind every quantum algorithm. Writing the circuit is only the beginning. Getting it to run correctly on real hardware is where the real work starts.</p>
+        <p>Also, I have developed a healthy respect for the transpiler.</p>
+        <p>It has quietly fixed more of my circuits than I would like to admit.</p>
+      </main>
+      <footer class="footer">
+        <div class="shell">
+          <span>rohan pattanayak</span>
+          <div class="footer-links">
+            <a class="interactive footer-link footer-github" href="https://github.com/RohanOnKeys">github</a>
+            <a class="interactive footer-link footer-linkedin" href="https://www.linkedin.com/in/rohan-pattanayak-a142a1284">linkedin</a>
+            <a class="interactive footer-link footer-email" href="mailto:rohanpxquantum@gmail.com">email</a>
+            <a class="interactive footer-link footer-book" href="https://medium.com/@rohanpxquantum/love-vs-qiskit-global-summer-school-25-e5d8fe8be176?sharedUserId=rohanpxquantum" target="_blank" rel="noopener">read here</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('.nav');
+      const items = nav.querySelectorAll('.interactive');
+      items.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          items.forEach(el => {
+            if (el !== item) el.classList.add('shrink');
+            else el.classList.remove('shrink');
+          });
+        });
+        item.addEventListener('mouseleave', () => {
+          items.forEach(el => el.classList.remove('shrink'));
+        });
+      });
+    });
+    </script>
+  </body>
+</html>

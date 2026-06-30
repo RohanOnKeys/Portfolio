@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="blog-bg">
     <div class="site">
       <header class="topbar shell">
         <nav class="nav" aria-label="primary">
@@ -21,8 +21,16 @@
       </header>
       <main class="shell page">
         <h1 class="page-title">blog</h1>
-        <p class="archive-intro">writing things down before they become harder to explain.</p>
+        <p class="archive-intro">between ink and eternity.</p>
         <section class="blog-list" aria-label="articles">
+          <a class="blog-row" href="articles/quantum-transpiler.html">
+            <span class="date">june 2026</span>
+            <div>
+              <h2>why quantum computers need translators before they can think</h2>
+              <p>quantum hardware has other plans, and the transpiler is the one that tells them to behave.</p>
+            </div>
+            <span class="arrow">&rarr;</span>
+          </a>
           <a class="blog-row" href="articles/browser-agents-dom.html">
             <span class="date">june 2026</span>
             <div>
@@ -64,9 +72,27 @@
             <a class="interactive footer-link footer-github" href="https://github.com/RohanOnKeys">github</a>
             <a class="interactive footer-link footer-linkedin" href="https://www.linkedin.com/in/rohan-pattanayak-a142a1284">linkedin</a>
             <a class="interactive footer-link footer-email" href="mailto:rohanpxquantum@gmail.com">email</a>
+            <a class="interactive footer-link footer-book" href="https://medium.com/@rohanpxquantum/love-vs-qiskit-global-summer-school-25-e5d8fe8be176?sharedUserId=rohanpxquantum" target="_blank" rel="noopener">read here</a>
           </div>
         </div>
       </footer>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('.nav');
+      const items = nav.querySelectorAll('.interactive');
+      items.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          items.forEach(el => {
+            if (el !== item) el.classList.add('shrink');
+            else el.classList.remove('shrink');
+          });
+        });
+        item.addEventListener('mouseleave', () => {
+          items.forEach(el => el.classList.remove('shrink'));
+        });
+      });
+    });
+    </script>
   </body>
 </html>
