@@ -37,7 +37,7 @@ body {
 }
 
 body.home-bg {
-  --page-bg-image: url("assets/images/page-home-bg.jpg");
+  --page-bg-image: url("assets/images/home-page2.jpg");
   --page-bg-position: center center;
   background-image: none;
 }
