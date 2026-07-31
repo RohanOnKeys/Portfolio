@@ -2,7 +2,6 @@
 
 * {
   box-sizing: border-box;
-  border-radius: 0 !important;
   border-color: var(--line);
 }
 
@@ -32,6 +31,7 @@
 html {
   min-height: 100%;
   background: var(--void);
+  font-size: 17px;
 }
 
 body {
@@ -42,10 +42,12 @@ body {
   background-image: url("assets/archive-bg.svg");
   background-size: cover;
   font-family: var(--font-sans);
+  font-size: 1.08rem;
+  line-height: 1.6;
   font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  letter-spacing: -0.005em;
+  letter-spacing: 0;
 }
 
 body.home-bg {
@@ -169,7 +171,7 @@ textarea {
   font-family: var(--font-gothic);
   font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.32em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--stone);
   background: transparent;
@@ -186,7 +188,7 @@ textarea {
   background: transparent;
   outline: none;
   transform: scale(1.14);
-  letter-spacing: 0.38em;
+  letter-spacing: 0;
 }
 
 .nav .interactive[aria-current="page"] {
@@ -238,7 +240,7 @@ main {
   margin: 0 0 1.4rem;
   color: var(--stone);
   font-size: clamp(0.7rem, 1.2vw, 0.82rem);
-  letter-spacing: 0.32em;
+  letter-spacing: 0;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -261,22 +263,26 @@ p {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-gothic);
+}
+
 h1 {
   margin-bottom: 1.5rem;
   color: var(--ink);
-  font-family: var(--font-gothic);
   font-weight: 500;
   font-size: clamp(3.2rem, 9.5vw, 9rem);
   line-height: 0.92;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   text-transform: lowercase;
 }
 
 .page-title {
   margin: 0 0 clamp(2rem, 5vw, 4rem);
-  font-family: var(--font-gothic);
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   line-height: 0.98;
   text-transform: lowercase;
   color: var(--ink);
@@ -289,7 +295,7 @@ h1 {
   font-family: var(--font-sans);
   font-size: clamp(1.3rem, 3vw, 2.4rem);
   line-height: 1.14;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .landing-copy .lead {
@@ -304,7 +310,7 @@ h1 {
 
 p {
   color: var(--bone);
-  font-size: clamp(1.02rem, 1.35vw, 1.15rem);
+  font-size: clamp(1.05rem, 1.45vw, 1.2rem);
   line-height: 1.72;
 }
 
@@ -325,7 +331,7 @@ p {
   align-items: center;
   gap: 0.55rem;
   font-family: var(--font-gothic);
-  letter-spacing: 0.28em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--stone);
   padding: 0.35rem 0;
@@ -345,7 +351,7 @@ p {
 .external-links .interactive:hover {
   color: var(--ink);
   transform: scale(1.08);
-  letter-spacing: 0.34em;
+  letter-spacing: 0;
   border-color: var(--ink);
 }
 
@@ -380,6 +386,14 @@ p {
   padding: clamp(4rem, 9vw, 7rem) 0 clamp(4rem, 7vw, 6rem);
 }
 
+.blog-page {
+  padding-bottom: 2rem;
+}
+
+.work-page {
+  padding-bottom: 2rem;
+}
+
 .about-grid {
   display: block;
 }
@@ -390,6 +404,8 @@ p {
 
 .text-stack p {
   color: var(--bone);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .text-stack p + p {
@@ -402,6 +418,8 @@ p {
 
 .short-blocks p {
   max-width: 66ch;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .archive {
@@ -412,7 +430,8 @@ p {
   color: var(--stone);
   max-width: 52ch;
   margin: -1rem 0 3rem;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .project {
@@ -421,17 +440,17 @@ p {
 }
 
 .project:last-child {
-  border-bottom: 1px solid var(--line);
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .project h2,
 .now-section h2 {
   margin-bottom: 0.9rem;
   color: var(--ink);
-  font-family: var(--font-sans);
   font-weight: 500;
   font-size: clamp(1.7rem, 3.2vw, 2.6rem);
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   text-transform: lowercase;
   line-height: 1;
 }
@@ -439,13 +458,15 @@ p {
 .project p {
   max-width: 66ch;
   color: var(--bone);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .tech {
   margin-top: 1rem;
   color: var(--ash);
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  letter-spacing: 0;
   text-transform: uppercase;
   line-height: 1.8;
 }
@@ -453,23 +474,22 @@ p {
 .article-link .interactive {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
   color: var(--bone);
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 0.25rem;
-  transition: color 160ms ease, border-color 160ms ease;
+  transition: color 160ms ease, transform 160ms ease;
 }
 
 .article-link .interactive:hover {
   color: var(--ink);
-  border-color: var(--ink);
+  transform: translateY(-1px);
 }
 
-.article-link .interactive::after {
-  content: "→";
+.repo-icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
 }
 
 .identity-small img,
@@ -494,6 +514,11 @@ p {
   transition: background 160ms ease;
 }
 
+.blog-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .blog-row:hover {
   background: rgba(232, 236, 243, 0.02);
 }
@@ -501,10 +526,9 @@ p {
 .blog-row h2 {
   margin-bottom: 0.4rem;
   color: var(--ink);
-  font-family: var(--font-sans);
   font-weight: 500;
   font-size: clamp(1.2rem, 2.2vw, 1.85rem);
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
   text-transform: lowercase;
   line-height: 1.1;
 }
@@ -512,7 +536,7 @@ p {
 .blog-row p {
   margin-bottom: 0;
   color: var(--stone);
-  font-size: 0.98rem;
+  font-size: 0.78rem;
   line-height: 1.55;
 }
 
@@ -521,7 +545,7 @@ p {
   color: var(--ash);
   font-family: var(--font-mono);
   font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -540,12 +564,11 @@ p {
 }
 
 .article h1 {
-  font-family: var(--font-sans);
   font-weight: 500;
   color: var(--ink);
   font-size: clamp(2.2rem, 5vw, 4.2rem);
   line-height: 1;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   text-transform: lowercase;
   margin: 1.25rem 0 2.5rem;
 }
@@ -559,7 +582,7 @@ p {
   margin-bottom: 3rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  letter-spacing: 0.24em;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
@@ -588,29 +611,45 @@ p {
 }
 
 .now-section:last-of-type {
-  border-bottom: 1px solid var(--line);
+  padding-bottom: 0;
 }
 
 .now-section h2 {
   margin-bottom: 1rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-gothic);
   font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.24em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--stone);
 }
 
 .now-section p {
   color: var(--bone);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.now-list {
+  margin: 0;
+  color: var(--bone);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.now-list code {
+  font: inherit;
+  color: inherit;
 }
 
 .footer {
   padding: 1.5rem 0 2rem;
   color: var(--stone);
-  font-family: var(--font-mono);
+  font-family: var(--font-gothic);
   font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0;
   text-transform: uppercase;
   margin-top: auto;
 }
@@ -691,21 +730,44 @@ p {
   .nav .interactive {
     padding: 0.3rem 0.2rem;
     font-size: 0.62rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0;
   }
 
   .nav .interactive:hover,
   .nav .interactive:focus-visible {
-    letter-spacing: 0.12em;
+    letter-spacing: 0;
   }
 
-  .index-main,
-  .about-grid {
+  .index-main {
     display: block;
   }
 
   .landing-copy {
     padding-top: 14vh;
+  }
+
+  .about-grid {
+    display: block;
+  }
+
+  .archive-intro,
+  .project p,
+  .text-stack p,
+  .short-blocks p,
+  .blog-row p,
+  .now-list,
+  .now > p {
+    font-size: 0.62rem;
+    line-height: 1.5;
+  }
+
+  .project {
+    padding: 1.55rem 0;
+  }
+
+  .project h2,
+  .now-section h2 {
+    margin-bottom: 0.65rem;
   }
 
   h1 {
