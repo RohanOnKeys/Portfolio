@@ -1,4 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/cinzel-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/cinzel-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/cinzel-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/cinzel-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("assets/fonts/space-grotesk-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("assets/fonts/space-grotesk-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("assets/fonts/space-grotesk-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("assets/fonts/space-grotesk-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("assets/fonts/jetbrains-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("assets/fonts/jetbrains-mono-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("assets/fonts/jetbrains-mono-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -303,6 +379,15 @@ h1 {
   margin-top: 1.75rem;
 }
 
+.identity-mark {
+  font-family: var(--font-gothic);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
 .landing-copy .lead + .lead {
   margin-top: 1rem;
   color: var(--stone);
@@ -404,8 +489,8 @@ p {
 
 .text-stack p {
   color: var(--bone);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.75;
 }
 
 .text-stack p + p {
@@ -418,8 +503,8 @@ p {
 
 .short-blocks p {
   max-width: 66ch;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.75;
 }
 
 .archive {
@@ -428,10 +513,10 @@ p {
 
 .archive-intro {
   color: var(--stone);
-  max-width: 52ch;
+  max-width: 56ch;
   margin: -1rem 0 3rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.75;
 }
 
 .project {
@@ -458,8 +543,8 @@ p {
 .project p {
   max-width: 66ch;
   color: var(--bone);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.75;
 }
 
 .tech {
@@ -469,6 +554,12 @@ p {
   letter-spacing: 0;
   text-transform: uppercase;
   line-height: 1.8;
+}
+
+.article-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
 .article-link .interactive {
@@ -536,8 +627,8 @@ p {
 .blog-row p {
   margin-bottom: 0;
   color: var(--stone);
-  font-size: 0.78rem;
-  line-height: 1.55;
+  font-size: clamp(0.9rem, 1.05vw, 0.98rem);
+  line-height: 1.6;
 }
 
 .date,
@@ -614,34 +705,60 @@ p {
   padding-bottom: 0;
 }
 
-.now-section h2 {
-  margin-bottom: 1rem;
-  font-family: var(--font-gothic);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: var(--stone);
+.now > .meta {
+  margin-bottom: 1.4rem;
 }
 
-.now-section p {
-  color: var(--bone);
-  font-size: 0.78rem;
-  line-height: 1.7;
-}
-
-.now-list {
+.now-items {
+  list-style: none;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.now-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.now-item-name {
   color: var(--bone);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
-  line-height: 1.8;
-  white-space: pre-wrap;
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.4;
 }
 
-.now-list code {
-  font: inherit;
-  color: inherit;
+.now-item-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.now-item-links .interactive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--stone);
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.now-item-links .interactive:hover {
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.now-item-links svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
 }
 
 .footer {
@@ -754,11 +871,13 @@ p {
   .project p,
   .text-stack p,
   .short-blocks p,
-  .blog-row p,
-  .now-list,
-  .now > p {
-    font-size: 0.62rem;
-    line-height: 1.5;
+  .blog-row p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .now-item-name {
+    font-size: 1rem;
   }
 
   .project {
