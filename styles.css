@@ -137,9 +137,16 @@ body.home-bg .site {
 }
 
 body.about-bg {
-  --page-bg-image: url("assets/images/page-about-bg.jpg");
-  --page-bg-position: center 26%;
+  --page-bg-image: url("assets/images/page-about-bg-wide.jpg");
+  --page-bg-position: center;
   background-image: none;
+}
+
+@media (orientation: portrait) {
+  body.about-bg {
+    --page-bg-image: url("assets/images/page-about-bg-tall.jpg");
+    --page-bg-position: center;
+  }
 }
 
 body.about-bg .site {
@@ -184,9 +191,16 @@ body.opensource-bg .site {
 }
 
 body.blog-bg {
-  --page-bg-image: url("assets/images/blog_bg.jpg");
-  --page-bg-position: center 38%;
+  --page-bg-image: url("assets/images/page-blog-bg-wide.jpg");
+  --page-bg-position: center;
   background-image: none;
+}
+
+@media (orientation: portrait) {
+  body.blog-bg {
+    --page-bg-image: url("assets/images/page-blog-bg-tall.jpg");
+    --page-bg-position: center;
+  }
 }
 
 body.blog-bg .site {
@@ -510,16 +524,6 @@ p {
   color: var(--bone);
   font-size: clamp(0.98rem, 1.15vw, 1.08rem);
   line-height: 1.75;
-}
-
-.text-stack p a {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-  text-decoration-color: var(--line);
-}
-
-.text-stack p a:hover {
-  color: var(--ink);
 }
 
 .text-stack p + p {
