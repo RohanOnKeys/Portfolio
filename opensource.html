@@ -3,37 +3,47 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>about | rohan pattanayak</title>
-    <meta name="description" content="about rohan pattanayak">
+    <title>open source | rohan pattanayak</title>
+    <meta name="description" content="open source contributions by rohan pattanayak">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="about-bg">
+  <body class="opensource-bg">
     <div class="site">
       <header class="topbar shell">
         <nav class="nav" aria-label="primary">
           <a class="interactive" href="index.html">home</a>
-          <a class="interactive" aria-current="page" href="about.html">about</a>
+          <a class="interactive" href="about.html">about</a>
           <a class="interactive" href="work.html">work</a>
-          <a class="interactive" href="opensource.html">open source</a>
+          <a class="interactive" aria-current="page" href="opensource.html">open source</a>
           <a class="interactive" href="blog.html">blog</a>
           <a class="interactive" href="now.html">now</a>
         </nav>
       </header>
-      <main class="shell page">
-        <h1 class="page-title">about</h1>
-        <div class="about-grid">
-          <section class="text-stack">
-            <p>i am a computer science student and independent builder interested in browser agents, machine learning infrastructure, developer systems, and software that stays useful when networks, interfaces, or assumptions break.</p>
-            <p>i like making complicated systems easier to inspect. better context for agents. more reliable movement of data. tools that expose the hidden parts before they turn into a very expensive mystery.</p>
-            <p>recent public work includes freight for cicd automation, yab for PyTorch pipeline generation, visor for browser agent context, rustom for terminal interfaces, and smaller tools like mopper, hammer mcp, hammer cli, and waterlily.</p>
-            <p><strong>education:</strong> <!-- TODO: university, degree, year --> qiskit global summer school 2025. <a class="interactive" href="https://github.com/RohanOnKeys/QGSS25">github.com/RohanOnKeys/QGSS25</a></p>
-            <p><strong>works with:</strong> python, rust, typescript, C++, pytorch, fastapi.</p>
-            <div class="short-blocks">
-             <p>based in india. building in public. mostly trying to make agent cooperate.</p>
-            </div>
-          </section>
-        </div>
+      <main class="shell page work-page">
+        <section class="archive">
+          <h1 class="page-title">open source</h1>
+          <p class="archive-intro">upstream work in other people's codebases, mostly C++ runtimes and linux internals.</p>
+          <article class="project">
+            <h2>hpx</h2>
+            <p>22 merged PRs to the C++ standard library for parallelism and concurrency. execution policy traits, performance counter thread safety, MSVC and MinGW support, DbgHelp symbol caching, and build fixes for conan and nvcc.</p>
+            <p class="article-link"><a class="interactive repo-icon" href="https://github.com/TheHPXProject/hpx/pulls?q=author:RohanOnKeys" aria-label="merged pull requests to hpx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg></a></p>
+          </article>
+          <article class="project">
+            <h2>criu</h2>
+            <p>merged fixes to linux checkpoint/restore, including skipping the kernel's auto-created tunl0 device during checkpoint.</p>
+            <p class="article-link"><a class="interactive repo-icon" href="https://github.com/checkpoint-restore/criu/pull/3164" aria-label="pull request to criu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg></a></p>
+          </article>
+          <article class="project">
+            <h2>submitty</h2>
+            <p>merged a fix that keeps signup fields filled in after validation errors.</p>
+            <p class="article-link"><a class="interactive repo-icon" href="https://github.com/Submitty/Submitty/pull/12947" aria-label="pull request to submitty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg></a></p>
+          </article>
+          <article class="project">
+            <h2>in review</h2>
+            <p>llvm (clang-repl XDG history), google/artemis (MCP test fixes), daytona (snapshot retry).</p>
+          </article>
+        </section>
       </main>
       <footer class="footer">
         <div class="shell">
