@@ -127,9 +127,16 @@ body {
 }
 
 body.home-bg {
-  --page-bg-image: url("assets/images/home-page2.jpg");
-  --page-bg-position: center 32%;
+  --page-bg-image: url("assets/images/page-home-bg-wide.jpg");
+  --page-bg-position: center;
   background-image: none;
+}
+
+@media (orientation: portrait) {
+  body.home-bg {
+    --page-bg-image: url("assets/images/page-home-bg-tall.jpg");
+    --page-bg-position: center;
+  }
 }
 
 body.home-bg .site {
@@ -164,9 +171,16 @@ body.work-bg .site {
 }
 
 body.now-bg {
-  --page-bg-image: url("assets/images/page-now-bg.jpg");
-  --page-bg-position: center 22%;
+  --page-bg-image: url("assets/images/page-now-bg-wide.jpg");
+  --page-bg-position: center;
   background-image: none;
+}
+
+@media (orientation: portrait) {
+  body.now-bg {
+    --page-bg-image: url("assets/images/page-now-bg.jpg");
+    --page-bg-position: center;
+  }
 }
 
 body.now-bg .site {
