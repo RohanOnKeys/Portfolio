@@ -1,6 +1,6 @@
 // Caches the whole site on first visit so page switches load instantly.
 // Bump CACHE_VERSION to drop old caches after large changes.
-const CACHE_VERSION = 'v1';
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = `site-${CACHE_VERSION}`;
 
 const PRECACHE = [
@@ -17,8 +17,10 @@ const PRECACHE = [
   'articles/quantum-transpiler.html',
   'articles/resumption-network-feature.html',
   'styles.css',
-  'assets/favicon.svg',
+  'assets/favicon.png',
+  'assets/apple-touch-icon.png',
   'assets/archive-bg.svg',
+  'assets/preview.js',
   'assets/fonts/cinzel-400.woff2',
   'assets/fonts/cinzel-500.woff2',
   'assets/fonts/cinzel-600.woff2',
@@ -34,6 +36,7 @@ const PRECACHE = [
   'assets/images/page-home-bg-tall.jpg',
   'assets/images/page-about-bg-wide.jpg',
   'assets/images/page-about-bg-tall.jpg',
+  'assets/images/page-work-bg-wide.jpg',
   'assets/images/page-work-bg.jpg',
   'assets/images/page-opensource-bg-wide.jpg',
   'assets/images/page-opensource-bg.jpg',
