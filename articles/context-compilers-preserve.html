@@ -43,28 +43,14 @@
             <a class="interactive footer-link footer-linkedin" href="https://www.linkedin.com/in/rohan-pattanayak-a142a1284" aria-label="linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
             <a class="interactive footer-link footer-email" href="mailto:rohanpxquantum@gmail.com" aria-label="email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
             <a class="interactive footer-link footer-x" href="https://x.com/RohanOnTweets" aria-label="x"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <button class="interactive footer-link footer-music" type="button" aria-pressed="false" aria-label="play music"><svg class="music-on" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><svg class="music-off" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><line x1="2" y1="2" x2="22" y2="22"/></svg></button>
           </div>
         </div>
       </footer>
     </div>
     <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('../sw.js');</script>
     <script src="../assets/preview.js" defer></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const nav = document.querySelector('.nav');
-      const items = nav.querySelectorAll('.interactive');
-      items.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          items.forEach(el => {
-            if (el !== item) el.classList.add('shrink');
-            else el.classList.remove('shrink');
-          });
-        });
-        item.addEventListener('mouseleave', () => {
-          items.forEach(el => el.classList.remove('shrink'));
-        });
-      });
-    });
-    </script>
+    <script src="../assets/nav.js" defer></script>
+    <script src="../assets/music.js" defer></script>
   </body>
 </html>

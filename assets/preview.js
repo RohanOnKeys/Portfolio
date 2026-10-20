@@ -76,26 +76,33 @@
       box.style.transform = `translate(${Math.max(8, left)}px, ${Math.max(8, top)}px)`;
     };
 
-    const links = [...document.querySelectorAll('a[href]')].filter((a) => !a.closest('.nav'));
-    const sources = new Set();
-    links.forEach((link) => {
-      const src = previewFor(link);
-      if (!src) return;
-      sources.add(src);
-      link.addEventListener('pointerenter', (e) => {
-        img.src = src;
-        place(e.clientX, e.clientY);
-        box.classList.add('is-visible');
+    // Runs on first load and again whenever nav.js swaps in a new page.
+    const bind = () => {
+      box.classList.remove('is-visible');
+      const links = [...document.querySelectorAll('a[href]')].filter((a) => !a.closest('.nav'));
+      const sources = new Set();
+      links.forEach((link) => {
+        const src = previewFor(link);
+        if (!src) return;
+        sources.add(src);
+        link.addEventListener('pointerenter', (e) => {
+          img.src = src;
+          place(e.clientX, e.clientY);
+          box.classList.add('is-visible');
+        });
+        link.addEventListener('pointermove', (e) => place(e.clientX, e.clientY));
+        link.addEventListener('pointerleave', () => box.classList.remove('is-visible'));
+        link.addEventListener('click', () => box.classList.remove('is-visible'));
       });
-      link.addEventListener('pointermove', (e) => place(e.clientX, e.clientY));
-      link.addEventListener('pointerleave', () => box.classList.remove('is-visible'));
-      link.addEventListener('click', () => box.classList.remove('is-visible'));
-    });
 
-    // Warm the cache so previews appear instantly on first hover.
-    const warm = () => sources.forEach((src) => { new Image().src = src; });
-    if ('requestIdleCallback' in window) requestIdleCallback(warm);
-    else setTimeout(warm, 1200);
+      // Warm the cache so previews appear instantly on first hover.
+      const warm = () => sources.forEach((src) => { new Image().src = src; });
+      if ('requestIdleCallback' in window) requestIdleCallback(warm);
+      else setTimeout(warm, 1200);
+    };
+
+    bind();
+    document.addEventListener('page:load', bind);
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

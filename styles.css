@@ -860,6 +860,18 @@ p {
   flex-shrink: 0;
 }
 
+.footer-music {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.footer-music[aria-pressed="true"] .music-off,
+.footer-music[aria-pressed="false"] .music-on {
+  display: none;
+}
+
 .footer-book::before {
   display: inline-block;
   flex-shrink: 0;

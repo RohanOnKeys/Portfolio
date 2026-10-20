@@ -1,6 +1,6 @@
 // Caches the whole site on first visit so page switches load instantly.
 // Bump CACHE_VERSION to drop old caches after large changes.
-const CACHE_VERSION = 'v4';
+const CACHE_VERSION = 'v5';
 const CACHE_NAME = `site-${CACHE_VERSION}`;
 
 const PRECACHE = [
@@ -21,6 +21,8 @@ const PRECACHE = [
   'assets/apple-touch-icon.png',
   'assets/archive-bg.svg',
   'assets/preview.js',
+  'assets/music.js',
+  'assets/nav.js',
   'assets/fonts/cinzel-400.woff2',
   'assets/fonts/cinzel-500.woff2',
   'assets/fonts/cinzel-600.woff2',
@@ -68,6 +70,9 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return;
+  // Audio is fetched in byte ranges, which the cache can't store, so let the
+  // browser handle it directly.
+  if (request.destination === 'audio' || request.headers.has('range')) return;
 
   event.respondWith(
     caches.open(CACHE_NAME).then(async (cache) => {
