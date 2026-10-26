@@ -1,6 +1,6 @@
 // Caches the whole site on first visit so page switches load instantly.
 // Bump CACHE_VERSION to drop old caches after large changes.
-const CACHE_VERSION = 'v6';
+const CACHE_VERSION = 'v7';
 const CACHE_NAME = `site-${CACHE_VERSION}`;
 
 const PRECACHE = [

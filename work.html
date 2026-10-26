@@ -26,6 +26,12 @@
           <h1 class="page-title">work</h1>
           <p class="archive-intro">systems, experiments, and public projects that grew from quick sketches into useful tools.</p>
           <article class="project">
+            <h2>langx</h2>
+            <p>a research prototype that runs langgraph agent steps on HPX localities, with HPX supervision and a commit fence on the coordinator, so a worker failure neither loses a step nor commits it twice.</p>
+            <p class="tech">python&nbsp;&nbsp; c++&nbsp;&nbsp; hpx&nbsp;&nbsp; langgraph&nbsp;&nbsp; fault tolerance</p>
+            <p class="article-link"><a class="interactive repo-icon" href="https://github.com/RohanOnKeys/langX" aria-label="github repository for langx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></p>
+          </article>
+          <article class="project">
             <h2>bitcraft</h2>
             <p>an offline bitcoin intelligence tool that links blockchain transactions to network metadata and ranks suspicious activity as alerts you can explain.</p>
             <p class="tech">python&nbsp;&nbsp; fastapi&nbsp;&nbsp; machine learning&nbsp;&nbsp; graph analysis&nbsp;&nbsp; bitcoin</p>
@@ -56,12 +62,6 @@
             <p class="article-link"><a class="interactive repo-icon" href="https://github.com/RohanOnKeys/crabbit" aria-label="github repository for crabbit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></p>
           </article>
           <article class="project">
-            <h2>crnt</h2>
-            <p>a continuous relay network transport for streaming across beyond-horizon links. phase 1 covers the frame format, the radio horizon link model and latency helpers.</p>
-            <p class="tech">python&nbsp;&nbsp; networking&nbsp;&nbsp; relay&nbsp;&nbsp; protocols</p>
-            <p class="article-link"><a class="interactive repo-icon" href="https://github.com/RohanOnKeys/CRNT" aria-label="github repository for crnt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></p>
-          </article>
-          <article class="project">
             <h2>freight</h2>
             <p>an auto cicd tool for moving code from commit to deploy with less repeated setup.</p>
             <p class="tech">python&nbsp;&nbsp; cicd&nbsp;&nbsp; automation&nbsp;&nbsp; developer tools</p>
@@ -89,12 +89,6 @@
             <p>an experimental space for thinking about resilient data movement when connections are interrupted, delayed, or simply decide they have had enough.</p>
             <p class="tech">systems research&nbsp;&nbsp; protocol ideas&nbsp;&nbsp; simulation</p>
             <p class="article-link"><a class="interactive repo-icon" href="https://github.com/RohanOnKeys/North-Star" aria-label="github repository for north star"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></p>
-          </article>
-          <article class="project">
-            <h2>orbital streaming protocol</h2>
-            <p>a research proposal for resumable and priority aware data transfer across disrupted orbital links.</p>
-            <p class="tech">networking&nbsp;&nbsp; persistence&nbsp;&nbsp; interrupted connections</p>
-            <p class="article-link"><a class="interactive repo-icon" href="https://github.com/RohanOnKeys/Orbital-Streaming-Protocol" aria-label="github repository for orbital streaming protocol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></p>
           </article>
           <article class="project">
             <h2>rustom</h2>
