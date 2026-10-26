@@ -1,20 +1,19 @@
-// Background music shared by every page, on by default for every visit. The
-// position is saved so the track picks up where it left off after a reload,
-// and a mute lasts until the tab is closed. Browsers refuse sound until the
-// visitor interacts with the page, so when autoplay is blocked the music
-// starts on the first click, tap or key press.
+// Background music shared by every page, muted by default. The footer icon
+// turns it on, and that choice lasts until the tab is closed. The position is
+// saved so the track picks up where it left off after a reload.
 (() => {
   const KEY = 'bg-music';
   const src = new URL('audio/misty-mountains.mp3', document.currentScript.src).href;
 
   let state = {};
   try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch {}
-  // Muting lasts for this visit only, so every new visit starts with music on.
-  try { state.muted = sessionStorage.getItem(KEY + '-muted') === '1'; } catch { state.muted = false; }
+  // Every new visit starts muted; unmuting holds for the rest of the visit.
+  try { state.muted = sessionStorage.getItem(KEY + '-muted') !== '0'; } catch { state.muted = true; }
 
   const audio = new Audio(src);
   audio.loop = true;
-  audio.preload = 'auto';
+  // Skip downloading the track until someone turns it on.
+  audio.preload = state.muted ? 'none' : 'auto';
   audio.volume = 0.4;
 
   const save = () => {
